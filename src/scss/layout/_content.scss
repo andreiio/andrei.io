@@ -1,0 +1,121 @@
+.entry-content.container {
+	padding-bottom: 7rem;
+	padding-top: 7rem;
+	margin: 0 auto;
+}
+
+main.content {
+	overflow: hidden;
+}
+
+.entry {
+	border-bottom: 1px solid map-get($colors, 2);
+	padding: 0 0 5rem;
+	margin: 5rem 0;
+
+	a.permalink {
+		text-decoration: none;
+		font-style: normal;
+		display: block;
+		color: #333;
+		border: 0;
+
+		&:hover {
+			.entry-title {
+				color: map-get($colors, 1);
+			}
+		}
+	}
+
+	.entry-content p {
+		margin: 0;
+	}
+
+	a.button {
+		margin-top: 2em;
+	}
+
+	.entry-meta {
+		font-family: $font-secondary;
+		color: map-get($colors, 4);
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		font-weight: 700;
+	}
+
+	.entry-title {
+		line-height: 1.15;
+		padding: 0;
+	}
+}
+
+.section-title {
+	text-align: center;
+	font-size: 2.6rem;
+}
+
+.section-header {
+	background-color: map-get($colors, 3);
+	padding: 2rem 0 2.5rem;
+
+	.section-title {
+		text-transform: uppercase;
+		letter-spacing: .05em;
+		font-size: 2.6rem;
+		text-align: left;
+		font-weight: 900;
+		line-height: 1;
+		float: left;
+		margin: 0;
+	}
+}
+
+.section-content {
+	padding-top: 5rem;
+}
+
+.archive-title {
+	text-align: center;
+}
+
+@media screen and (min-width: map-get($breakpoints, medium)) {
+	.section-header {
+		padding: 3rem 0 3.5rem;
+
+		.section-title {
+			font-size: 4.6rem;
+		}
+	}
+
+	.entry {
+		.entry-header {
+			.entry-title {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	.entry-content.container {
+		padding-bottom: 8.5rem;
+		padding-top: 8.5rem;
+	}
+}
+
+@media screen and (min-width: map-get($breakpoints, max)) {
+	.section-header {
+		padding: 6rem 0 6.5rem;
+	}
+
+	.entry {
+		.entry-header {
+			.entry-title {
+				font-size: 6.4rem;
+			}
+		}
+	}
+
+	.entry-content.container {
+		padding-bottom: 10rem;
+		padding-top: 10rem;
+	}
+}

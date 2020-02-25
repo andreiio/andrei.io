@@ -1,0 +1,33 @@
+@charset "UTF-8";
+// =============================================================================
+// Site settings
+// =============================================================================
+
+// Fonts
+$font-primary:     'ff-tisa-web-pro', Georgia, serif;
+$font-secondary:   'museo-sans', sans-serif;
+
+// Colors
+$colors: (
+	0:             #FA5026,
+	1:             #F39031,
+	2:             #D9D9D9,
+	3:             #F0F0F0,
+	4:             #ABABAB,
+	5:             #222
+);
+
+// Grid
+$container-width:  1130px;
+$container-narrow: 930px;
+$num-cols:         12;
+
+// Responsive breakpoints
+$breakpoints: (
+	null:          null,
+	small:         500px,
+	grid:          670px,
+	medium:        768px,
+	large:         910px,
+	max:           960px
+);

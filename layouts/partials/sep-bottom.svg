@@ -1,0 +1,2 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 42.18354"><path fill="#F39031" d="M.003 22.694L1000 2.928v4.393l-.008-.054L0 42.184"/><path fill="#F0F0F0" d="M.003 0H1000v5.124-.022L.003 22.694"/><image src="{{ "images/sep-bottom.png" | relURL }}" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""/>
+</svg>

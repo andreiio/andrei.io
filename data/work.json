@@ -1,0 +1,23 @@
+[
+	{
+		"title": "World Economic Forum History",
+		"tags": ["Interactive Timeline", "Multilingual"],
+		"image": "wef-history",
+		"url": "https://widgets.weforum.org/history/",
+		"desc": "An interactive timeline that captures key events from forty five years of the World Economic Forum's history. Also available in [Chinese](https://widgets.weforum.org/history-chinese/)."
+	},
+	{
+		"title": "Opera Clima",
+		"tags": ["Custom WordPress website", "Multilingual"],
+		"image": "opera-clima",
+		"url": "http://opera-clima.ro/en/",
+		"desc": "Joint program between the World Bank and the Romanian Ministry of Environment, Waters and Forests on the Europe 2020 goals for preventing and combating climate change and reducing carbon emissions."
+	},
+	{
+		"title": "About oil",
+		"tags": ["Interactive Infographic"],
+		"image": "desprepetrol",
+		"url": "https://desprepetrol.ro/",
+		"desc": "An interactive infographic comissioned by the Romanian Petroleum Exploration and Production Companies Association, exploring the current state of the oil industry and showcasing some of the lesser-known uses of oil."
+	}
+]

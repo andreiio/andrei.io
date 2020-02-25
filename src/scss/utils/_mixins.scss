@@ -1,0 +1,17 @@
+@mixin breakpoint($breakpoint, $type: min) {
+	@if $type == 'min' {
+		@media (min-width: map-get($breakpoints, $breakpoint)) {
+			@content;
+		}
+	} @else if $type == 'max' {
+		@media (max-width: map-get($breakpoints, $breakpoint) - 1px) {
+			@content;
+		}
+	}
+}
+
+@mixin modernizr($selector) {
+	@at-root html.#{$selector} & {
+		@content;
+	}
+}

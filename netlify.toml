@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "./build.sh"
+
+  [build.environment]
+    NODE_VERSION = "v10.18.1"
+    HUGO_VERSION = "0.65.3"
+    HUGO_BASEURL = "https://v1.andrei.io"
+    HUGO_ENV = "develop"
+
+[context.production.environment]
+  HUGO_ENV = "production"

@@ -1,0 +1,178 @@
+p {
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+
+strong {
+	font-weight: 700;
+}
+
+small {
+	font-size: 1.8rem;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	background-color: map-get($colors, 3);
+	margin: 0 2rem 3.5rem;
+	font-style: italic;
+	padding: 2rem;
+
+	p:last-of-type {
+		margin: 0;
+	}
+}
+
+
+code,
+pre {
+	font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+	background-color: lighten(map-get($colors, 3), 3%);
+	border: 1px solid darken(map-get($colors, 3), 3%);
+	font-size: 1.2rem;
+	color: #333;
+}
+
+code {
+	white-space: nowrap;
+	padding: 2px 4px;
+}
+
+pre {
+	word-break: break-all;
+	word-wrap: break-word;
+	line-height: 1.8rem;
+	white-space: pre;
+	margin: 0 0 1rem;
+	display: block;
+	padding: 1rem;
+
+	code {
+		background-color: transparent;
+		white-space: pre;
+		color: inherit;
+		padding: 0;
+		border: 0;
+	}
+}
+
+cite {
+	font-style: normal;
+}
+
+hr,
+.clear-line {
+	border-bottom: 1px solid map-get($colors, 3);
+	padding: 6rem 0 0;
+	margin: 0 0 6rem;
+	overflow: hidden;
+	width: 100%;
+	border: 0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font-secondary;
+	margin: 0 0 2.5rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+h1 {
+	font-size: 2.4rem;
+}
+
+h2,
+p.about {
+	font-size: 2.1rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	text-transform: uppercase;
+	letter-spacing: .0125em;
+	font-size: 1.8rem;
+}
+
+h5,
+h6,
+h2.sub {
+	font-family: $font-primary;
+	font-size: 1.8rem;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+h6 {
+	font-size: 1.5rem;
+}
+
+.main-title,
+.entry-intro h1 {
+	text-align: center;
+	font-style: normal;
+	font-size: 2.6rem;
+	font-weight: 700;
+}
+
+.entry-intro {
+	h1 {
+		font-family: $font-primary;
+		margin-bottom: 5rem;
+		font-size: 2.3rem;
+		font-weight: 300;
+	}
+
+	.about p {
+		@extend h2;
+
+		font-family: $font-primary;
+		text-align: center;
+		line-height: 1.75;
+		font-weight: 300;
+	}
+}
+
+@media (min-width: map-get($breakpoints, medium)) {
+	.main-title {
+		font-size: 3.6rem;
+	}
+
+	.entry-intro h1 {
+		font-size: 3rem;
+	}
+
+	h1 { font-size: 2.8rem; }
+	h2 { font-size: 2.4rem; }
+	h3 { font-size: 2rem;   }
+}
+
+
+@media (min-width: map-get($breakpoints, max)) {
+	.main-title {
+		font-size: 4.6rem;
+	}
+
+	.entry-intro h1 {
+		font-size: 3.4rem;
+	}
+
+	h1 { font-size: 3.2rem; }
+	h2 { font-size: 2.8rem; }
+	h3 { font-size: 2.4rem; }
+}
+

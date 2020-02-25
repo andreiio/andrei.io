@@ -1,0 +1,58 @@
+{{ define "main" }}
+<main class="content contact">
+	<div class="entry-content container narrow">
+		<h1 class="main-title">{{ .Title }}</h1>
+
+		<div class="contact-desc">{{ .Content }}</div>
+		<form action="{{ "/thanks/" | relURL }}" netlify method="post" class="form">
+			<div class="row">
+				<div class="col m6">
+					<label for="name">Name</label>
+					<input type="text" name="name" value="" id="name" placeholder="Name" aria-required="true" aria-invalid="false" required>
+				</div>
+				<div class="col m6">
+					<label for="email">Email</label>
+					<input type="email" name="email" value="" id="email" placeholder="Email" aria-required="true" aria-invalid="false" required>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col m6">
+					<label for="phone">Phone</label>
+					<input type="text" name="phone" value="" id="phone" placeholder="Phone">
+				</div>
+				<div class="col m6">
+					<label for="website">Website</label>
+					<input type="text" name="website" value="" id="website" placeholder="Website">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col m6">
+					<label for="budget">Estimated budget</label>
+					<input type="text" name="budget" value="" id="budget" placeholder="Estimated budget">
+				</div>
+				<div class="col m6">
+					<label for="timeline">Estimated timeline</label>
+					<input type="text" name="timeline" value="" id="timeline" placeholder="Estimated timeline">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col m12">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="6" placeholder="Message" aria-required="true" aria-invalid="false" required></textarea>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col captcha">
+					<div class="captcha-box" netlify-recaptcha></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col submit">
+					<input type="submit" name="submit" value="Send it">
+					<input type="hidden" name="form-name" value="contact">
+				</div>
+			</div>
+		</form>
+	</div>
+</main>
+{{ end }}

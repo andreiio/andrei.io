@@ -1,0 +1,17 @@
+{
+	"root": true,
+	"extends": "eslint:recommended",
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"globals": {
+		"Modernizr": true,
+		"typeAnim": false,
+		"Pristine": false,
+		"$": true
+	},
+	"rules": {
+		"no-console": off
+	}
+}

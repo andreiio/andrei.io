@@ -1,0 +1,94 @@
+.repo-intro {
+	@include breakpoint(grid) {
+		padding: 0 2rem 0 0;
+	}
+
+	.code4-logo {
+		background-image: url('images/code4.png');
+		background-repeat: no-repeat;
+		background-position: 0 50%;
+		border-color: transparent;
+		background-size: 1em;
+		padding-left: 1.25em;
+		font-style: normal;
+		white-space: nowrap;
+
+		&:hover {
+			border-color: #00F;
+			color: inherit;
+		}
+	}
+}
+
+.svgasimg {
+	.code4-logo {
+		background-image: url('images/code4.svg');
+	}
+}
+
+.repo-list {
+	@include breakpoint(grid) {
+		padding: 0 0 0 2rem;
+	}
+
+	.row {
+		margin: 0;
+	}
+
+	.repo {
+		margin: 0;
+
+		+ .repo {
+			margin-top: 2rem;
+		}
+
+		h3 {
+			margin-bottom: 1rem;
+
+			a,
+			.badge {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			a {
+				margin-right: 1rem;
+				font-style: normal;
+				border: 0;
+			}
+		}
+
+		p {
+			color: map-get($colors, 4);
+			max-height: 5.6rem;
+			font-style: italic;
+			overflow: hidden;
+			margin: 0;
+		}
+
+		.badge {
+			white-space: nowrap;
+
+			i,
+			span {
+				vertical-align: middle;
+				display: inline-block;
+			}
+
+			i {
+				background-color: #CCC;
+				margin: 0 .6rem 0 0;
+				border-radius: 50%;
+				height: 1.3rem;
+				width: 1.3rem;
+			}
+
+			span {
+				color: map-get($colors, 4);
+				font-size: 1.3rem;
+				font-weight: 300;
+				line-height: 1;
+			}
+		}
+	}
+}

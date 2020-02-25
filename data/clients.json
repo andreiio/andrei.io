@@ -1,0 +1,34 @@
+[
+	{
+		"name": "World Economic Forum",
+		"image": "wef.png"
+	},
+	{
+		"name": "World Bank Group",
+		"image": "worldbank.png"
+	},
+	{
+		"name": "Boston Consulting Group",
+		"image": "bcg.png"
+	},
+	{
+		"name": "Accenture",
+		"image": "accenture.png"
+	},
+	{
+		"name": "Amnesty International",
+		"image": "amnesty.png"
+	},
+	{
+		"name": "Newmark Grubb Knight Frank",
+		"image": "ngkf.png"
+	},
+	{
+		"name": "Schwab Foundation for Social Entrepreneurship",
+		"image": "schwabfound.png"
+	},
+	{
+		"name": "Friedrich Ebert Stiftung",
+		"image": "fes.png"
+	}
+]

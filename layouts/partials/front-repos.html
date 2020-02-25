@@ -1,0 +1,25 @@
+<section id="repos" class="front-repos alt">
+	{{- partial "sep-top.svg" . -}}
+	<div class="entry-content container">
+		<div class="row">
+			<div class="repo-intro col m5 offset-m1">
+				<h1>Open source</h1>
+				<p>I volunteer most of my spare time working with the awesome people over at <a href="https://code4.ro/en/" class="code4-logo" target="_blank">Code for Romania</a>, where we build tech tools for a stronger society.</p>
+				<p></p>
+			</div>
+			<div class="repo-list col m5">
+				{{- range $id, $repo := $.Site.Data.repos -}}
+					<div class="repo">
+						<h3>
+							<a href="{{ .url }}" target="_blank">{{ .name }}</a>
+							<span class="badge">
+								<i style="background-color:{{ .primaryLanguage.color }}"></i>
+								<span class="tag">{{ .primaryLanguage.name }}</span>
+							</span>
+						</h3>
+						<p>{{ .description }}</p>
+					</div>
+				{{- end -}}
+			</div>
+	</div>
+</section>

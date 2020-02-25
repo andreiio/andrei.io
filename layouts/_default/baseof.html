@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" class="no-js" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.typekit.net/{{ .Site.Params.typekit }}.css">
+<link rel="stylesheet" href="{{ "app.css" | relURL }}" type="text/css" media="all">
+<link rel="apple-touch-icon" href="{{ "images/logo.png" | relURL }}">
+<link rel="icon" type="image/png" href="{{ "images/logo.png" | relURL }}">
+<link rel="mask-icon" href="{{ "images/pin.svg" | relURL }}" color="#F39031">
+
+<title>{{ if isset .Params "title" -}} {{ .Title }} - {{ end }} {{- .Site.Title -}}</title>
+<meta itemprop="name" content="{{ if isset .Params "title" -}} {{ .Title }} - {{ end }} {{- .Site.Title -}}">
+<meta property="og:title" content="{{ if isset .Params "title" -}} {{ .Title }} - {{ end }} {{- .Site.Title -}}">
+<meta itemprop="description" content="{{ .Site.Params.metadesc }}">
+<meta property="og:description" content="{{ .Site.Params.metadesc }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ "/images/cover.png" | absURL }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<script src="{{ "modernizr.js" | relURL }}"></script>
+</head>
+<body>
+<div class="site-container">
+	<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+		<div class="container">
+			<a href="{{ "" | relURL }}" class="title-area">
+				<h1 class="site-title line" itemprop="headline">{{ .Site.Params.headline | markdownify }}</h1>
+				<p class="site-description" itemprop="description">{{ .Site.Params.description }}</p>
+			</a>
+			<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<h1 class="screen-reader-text">Primary menu</h1>
+				<ul>
+					{{- range .Site.Menus.main -}}
+						<li class="menu-item{{ if ($.IsMenuCurrent "main" .) }} menu-current{{end}}"><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+					{{- end -}}
+				</ul>
+			</nav>
+		</div>
+	</header>
+	{{- block "main" . }}{{ end -}}
+</div>
+<footer class="footer">
+	<div class="logo"><svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+		<path fill="#F39031" d="M182.25 10.77a255.75 255.75 0 0 1 280.09 93.74C494 147.19 511.2 200 512 253v6.16c-.84 50.62-16.48 101-45.51 142.54-80.28 116.3-239.61 145.41-355.86 65.12a255.81 255.81 0 0 1-65.77-66.06C16.25 359.41.82 309.41 0 259.19V253c.8-53.07 18-105.83 49.66-148.5a256.34 256.34 0 0 1 132.59-93.73z"></path>
+		<path class="letter" fill="#FFF" d="M238.69 96.43c10.37-.08 20.74 0 31.11 0q37.74 88.89 75.55 177.73H402V305h-43.7q14.55 34 29 68.13h-38.76c-9.35-22.48-18.58-45-28-67.5-46 .13-91.91-.33-137.86-.18-9.3 22.61-18.86 45.14-28.32 67.68h-37.6q61-138.33 121.88-276.65zM196 274.16c37.19 0 74.37-.74 111.56-.43-18.17-45-36.09-90.06-54.38-135q-28.61 67.7-57.18 135.43z"></path>
+		<path class="dot" fill="#FFF" d="M352.34 233.93c1.85 12.35 14.15 21.9 26.58 20.52 15.18-.44 26.78-17 22.29-31.49-3-12.18-16-20.49-28.32-18.14-13.39 1.79-23.24 15.9-20.53 29.11z"></path>
+		<image src="{{ "images/logo.png" | relURL }}" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
+	</svg></div>
+</footer>
+<script src="{{ "vendor.js" | relURL }}"></script>
+<script src="{{ "app.js" | relURL }}"></script>
+{{ template "_internal/google_analytics.html" . }}
+</body>
+</html>

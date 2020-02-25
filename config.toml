@@ -1,0 +1,15 @@
+title           = "Andrei Ioniță – Web Developer & Consultant"
+languageCode    = "en-US"
+canonifyURLs    = true
+disableKinds    = ["RSS", "taxonomy", "taxonomyTerm", "sitemap"]
+
+disableHugoGeneratorInject = true
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[params]
+  headline    = "__Andrei__ Ioniță"
+  description = "Web Developer & Consultant"
+  metadesc    = "Full-stack web developer and consultant based in Lisbon, Portugal."
+  typekit     = "pne0xdy"

@@ -1,0 +1,66 @@
+.project {
+	padding: 3rem 0 8rem;
+	text-align: center;
+
+	.project-showcase {
+		padding: 0 1rem;
+
+		img {
+			max-width: 47rem;
+			width: 100%;
+		}
+	}
+
+	.project-details {
+		.entry-title {
+			margin-bottom: .75rem;
+		}
+
+		.entry-meta {
+			letter-spacing: .125rem;
+			margin-bottom: 2rem;
+			font-size: 1.2rem;
+			list-style: none;
+
+			/* &::before {
+				color: map-get($colors, 1);
+				margin-right: .5rem;
+				font-size: 1.6rem;
+				content: '\2022';
+				display: inline;
+			} */
+
+			li {
+				display: inline-block;
+
+				&::after {
+					margin-right: .35rem;
+					content: ',';
+				}
+
+				&:last-child::after {
+					content: '';
+				}
+			}
+		}
+	}
+}
+
+
+@media (min-width: map-get($breakpoints, grid)) {
+	.project {
+		text-align: left;
+
+		.project-details {
+			padding: 0 0 0 5rem;
+		}
+
+		.project-showcase {
+			padding: 0;
+
+			&.reverse + .project-details {
+				padding: 0 5rem 0 0;
+			}
+		}
+	}
+}

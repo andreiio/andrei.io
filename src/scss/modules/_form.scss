@@ -1,0 +1,160 @@
+input,
+select,
+textarea {
+	font-family: $font-primary;
+	border: 2px solid map-get($colors, 3);
+	padding: 1rem 1.5rem;
+	font-style: italic;
+	font-size: 1.6rem;
+	font-weight: 300;
+	background: #FFF;
+	appearance: none;
+	color: #333;
+	width: 100%;
+
+	&:focus {
+		border-color: map-get($colors, 1);
+		outline: none;
+	}
+}
+
+textarea {
+	resize: vertical;
+	height: auto;
+}
+
+input[type='search'] {
+	max-width: 25rem;
+	width: 100%;
+}
+
+.contact-desc {
+	max-width: map-get($breakpoints, medium);
+	text-align: center;
+	font-style: italic;
+	font-size: 2rem;
+	margin: 4% auto 8%;
+}
+
+.form {
+	padding: 0;
+	margin: 0;
+
+	.col {
+		position: relative;
+		padding: 0 1rem;
+
+		&.response {
+			text-align: center;
+			margin: 0;
+		}
+
+		&.submit {
+			text-align: center;
+		}
+
+		&.has-input {
+			label {
+				transform: translateY(0);
+				opacity: 1;
+			}
+
+			input[type],
+			textarea {
+				padding-top: 2rem;
+			}
+		}
+
+		&.captcha {
+			text-align: center;
+
+			&.not-valid {
+				padding-top: 1.5em;
+
+				.error {
+					padding: 0;
+					right: 0;
+					left: 0;
+				}
+			}
+
+			.captcha-box {
+				display: inline-block;
+			}
+
+		}
+	}
+
+	i.req {
+		color: map-get($colors, 1);
+		font-style: normal;
+		font-weight: 300;
+		line-height: .1;
+	}
+
+	label,
+	.error {
+		font-family: $font-secondary;
+		text-transform: uppercase;
+		pointer-events: none;
+		padding-top: .7rem;
+		position: absolute;
+		font-weight: 700;
+		font-size: 1.1rem;
+		top: 0;
+	}
+
+	label {
+		transition: transform .15s, opacity .15s;
+		transform: translateY(15%);
+		color: map-get($colors, 1);
+		padding-left: 1.2rem;
+		z-index: 2;
+		opacity: 0;
+	}
+
+	.error {
+		color: map-get($colors, 0);
+		padding-right: 1.2rem;
+		right: 1rem;
+		z-index: 3;
+	}
+
+	input[type='email'],
+	input[type='text'],
+	input[type='tel'],
+	input[type='url'],
+	textarea,
+	select {
+		border-radius: 4px;
+		font-style: normal;
+		font-size: 1.6rem;
+		padding: 1.2rem;
+		height: 6rem;
+	}
+
+	select {
+		height: 5.4rem;
+	}
+
+	textarea[name='message'] {
+		min-height: 15rem;
+		height: 20rem;
+	}
+}
+
+@media (max-width: map-get($breakpoints, grid) - 1px) {
+	.form .row {
+		margin-bottom: 0;
+	}
+
+	.contact-desc br {
+		display: none;
+	}
+}
+
+@media (min-width: map-get($breakpoints, medium)) {
+	.contact-desc {
+		font-size: 2.4rem;
+	}
+}

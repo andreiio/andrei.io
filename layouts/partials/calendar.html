@@ -1,0 +1,21 @@
+<div class="availability">
+	<table class="calendar">
+		<thead><tr>
+		{{- range $month := .Site.Data.availability -}}
+			<th><span>{{index $month "name"}}</span></th>
+		{{- end -}}
+		</tr></thead>
+	<tbody><tr>
+		{{- range $month := .Site.Data.availability -}}
+			<td class='{{index $month "status"}}'></td>
+		{{- end -}}
+		</tr></tbody>
+	</table>	
+
+	<ul class="legend">
+		<li><i class="past"></i>Past Months</li>
+		<li><i class="none"></i>No Availability</li>
+		<li><i class="part"></i>Partial Availability</li>
+		<li><i class="full"></i>Full Availability</li>
+	</ul>
+</div>

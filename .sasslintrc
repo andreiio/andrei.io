@@ -1,0 +1,44 @@
+{
+	"options": {
+		"merge-default-rules": true,
+		"formatter": "stylish",
+		"max-warnings": 50
+	},
+	"files": {
+		"include": "src/scss/**/*.scss"
+	},
+	"rules": {
+		"force-attribute-nesting": 0,
+		"force-pseudo-nesting": 0,
+		"force-element-nesting": 0,
+		"hex-notation": [
+			2,
+			{
+				"style": "uppercase"
+			}
+		],
+		"indentation": [
+			2,
+			{
+				"size": "tab"
+			}
+		],
+		"mixins-before-declarations": 0,
+		"nesting-depth": [
+			2,
+			{
+				"max-depth": 4
+			}
+		],
+		"no-color-literals": 0,
+		"no-css-comments": 0,
+		"no-qualifying-elements": 0,
+		"no-warn": 1,
+		"placeholder-in-extend": 0,
+		"property-sort-order": 0,
+		"quotes": "single",
+		"single-line-per-selector": 1,
+		"space-before-colon": 0,
+		"url-quotes": 1
+	}
+}

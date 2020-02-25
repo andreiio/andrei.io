@@ -1,0 +1,10 @@
+<section id="clients" class="front-clients">
+	<div class="entry-content container">
+		<h1 class="main-title">People I worked with</h1>
+		<div class="entry-clients">
+			{{- range $.Site.Data.clients -}}
+				<div class="client"><img src="/images/clients/{{ .image }}" alt="{{ .name }} logo"></div>
+			{{- end -}}
+		</div>
+	</div>
+</section>

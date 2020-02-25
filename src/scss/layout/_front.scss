@@ -1,0 +1,94 @@
+section {
+	position: relative;
+	background: #FFF;
+
+	&.alt {
+		background-color: map-get($colors, 3);
+
+		> svg,
+		> img {
+			background-color: #FFF;
+			display: block;
+		}
+	}
+}
+
+.front-intro {
+	max-width: 80rem;
+	z-index: 1;
+
+	.avatar {
+		margin: 0 auto 2.5rem;
+		border-radius: 50%;
+		width: 17.5rem;
+		display: block;
+	}
+}
+
+
+.front-projects {
+	z-index: 2;
+
+	.entry-projects {
+		.project {
+			padding: 2rem 0;
+			border: 0;
+
+			&:last-of-type {
+				padding-bottom: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.front-clients {
+	z-index: 3;
+
+	.entry-clients {
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		margin: 5rem 0 0;
+		flex-wrap: wrap;
+		display: flex;
+	}
+
+	.client {
+		transition: filter .5s;
+		filter: grayscale(100%);
+		display: block;
+		padding: 2rem;
+		width: 50%;
+		border: 0;
+
+		&:hover {
+			filter: grayscale(0%);
+		}
+
+		img {
+			max-height: 5rem;
+			width: auto;
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, grid)) {
+	.front-clients {
+		.client {
+			width: 25%;
+
+			img {
+				max-height: 7.5rem;
+			}
+		}
+	}
+
+	.front-projects {
+		.entry-projects {
+			.project {
+				padding: 3rem 0;
+			}
+		}
+	}
+}

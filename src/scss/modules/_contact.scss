@@ -1,0 +1,72 @@
+main.contact {
+	.main-title {
+		margin: 0;
+	}
+
+	.project-details {
+		@extend %clearfix;
+
+		border-bottom: 1px solid map-get($colors, 3);
+		text-align: center;
+		padding: 0 0 7%;
+		margin: 0 auto;
+
+		@include breakpoint(grid, max) {
+			width: 80%;
+		}
+
+
+		h2 {
+			text-transform: none;
+			margin: 0 0 .5em;
+
+			svg,
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			svg {
+				display: inline-block;
+				margin: 0 .35em 0 0;
+				width: 3.6rem;
+			}
+		}
+
+
+		p {
+			clear: left;
+			margin: 0;
+
+			em {
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, grid)) {
+	main.contact {
+		.project-details {
+			h2 svg {
+				margin: 0 auto 2rem;
+				display: block;
+				width: 5rem;
+			}
+
+			> .col {
+				padding: 1.5rem;
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, medium)) {
+	main.contact {
+		.project-details {
+			h2 svg {
+				width: 6rem;
+			}
+		}
+	}
+}

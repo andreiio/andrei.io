@@ -1,0 +1,92 @@
+.header {
+	@extend %clearfix;
+
+	border-bottom: 4px solid map-get($colors, 3);
+	background-color: #FFF;
+	padding: 1rem 0 .5rem;
+
+	.container {
+		position: relative;
+		z-index: 0;
+	}
+
+	.title-area {
+		text-align: center;
+		display: block;
+	}
+
+	.site-title {
+		text-transform: uppercase;
+		letter-spacing: .075em;
+		display: inline-block;
+		position: relative;
+		font-size: 2.3rem;
+		font-weight: 300;
+		margin: 0;
+
+		strong {
+			font-weight: 900;
+		}
+
+		a {
+			color: map-get($colors, 1);
+		}
+	}
+
+	.site-description {
+		text-align: center;
+		font-style: italic;
+		font-size: 1.6rem;
+		line-height: 1;
+		margin: 0;
+	}
+
+	a {
+		$shadow: #FFF;
+
+		&:hover .line {
+			color: inherit;
+			text-shadow: .1em 0 $shadow, .1em .02em $shadow, .1em .04em $shadow, .1em .06em $shadow, .1em .08em $shadow, .1em .1em $shadow, .08em .1em $shadow, .06em .1em $shadow, .04em .1em $shadow, .02em .1em $shadow, 0 .1em $shadow, -.02em .1em $shadow, -.04em .1em $shadow, -.06em .1em $shadow, -.08em .1em $shadow, -.1em .1em $shadow, -.1em .08em $shadow, -.1em .06em $shadow, -.1em .04em $shadow, -.1em .02em $shadow, -.1em 0 $shadow, -.1em .02em $shadow, -.1em .04em $shadow, -.1em -.06em $shadow, -.1em -.08em $shadow, -.1em -.1em $shadow, -.08em -.1em $shadow, -.06em -.1em $shadow, -.04em -.1em $shadow, -.02em -.1em $shadow, 0 -.1em $shadow, .02em -.1em $shadow, .04em -.1em $shadow, .06em -.1em $shadow, .08em -.1em $shadow, .1em -.1em $shadow, .1em -.08em $shadow, .1em -.06em $shadow, .1em -.04em $shadow, .1em -.02em $shadow;
+
+			&::after {
+				width: 100%;
+			}
+		}
+
+		.line::after {
+			border-bottom: 2px solid map-get($colors, 1);
+			transition: width .3s ease-in-out;
+			position: absolute;
+			margin: auto;
+			content: '';
+			z-index: -1;
+			bottom: 2px;
+			width: 0;
+			right: 0;
+			left: 0;
+		}
+	}
+
+	.line {
+		transition: color .15s ease-in-out, text-shadow 0s ease-in-out .15s;
+	}
+}
+
+@media (max-width: map-get($breakpoints, grid) - 1) {
+	.header {
+		.container {
+			padding: 0;
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, grid)) {
+	.header {
+		padding: 2.5rem 0;
+
+		.title-area {
+			text-align: left;
+			float: left;
+		}
+	}
+}

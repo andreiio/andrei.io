@@ -1,0 +1,18 @@
+<section class="front-intro entry-content container narrow">
+	<div class="entry-intro">
+		<img src="/images/me.jpg" alt="" class="avatar">
+		<h1>
+			{{- .Params.Hi -}}
+			<br>
+			I build&nbsp;<span class="type-wrapper">
+				{{- range $id, $word := .Site.Data.build -}}
+					<b {{- if eq $id 0 }} class="is-visible"{{ end }}>{{ . }}</b>
+				{{- end -}}
+			</span>
+		</h1>
+
+		<div class="about">
+			{{- .Content -}}
+		</div>
+	</div>
+</section>

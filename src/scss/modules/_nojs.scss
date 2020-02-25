@@ -1,0 +1,41 @@
+.no-js {
+	body {
+		padding-top: 6.8rem;
+	}
+
+	.type-wrapper {
+		&::after {
+			content: none;
+		}
+	}
+
+	noscript {
+		&.notice {
+			background-color: map-get($colors, 0);
+			font-family: $font-secondary;
+			text-align: center;
+			position: absolute;
+			font-size: 1.4rem;
+			font-weight: 400;
+			padding: 1rem 0;
+			z-index: 99;
+			color: #FFF;
+			right: 0;
+			left: 0;
+			top: 0;
+		}
+
+		&.contact-desc {
+			color: map-get($colors, 0);
+			display: block;
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, small)) {
+	.no-js {
+		body {
+			padding-top: 4.3rem;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<section id="work" class="front-projects alt">
+	{{- partial "sep-top.svg" . -}}
+	<div class="entry-content container">
+		<h1 class="main-title">Featured projects</h1>
+		<div class="entry-projects">
+			{{- range $id, $project := $.Site.Data.work -}}
+				<article class="row entry project" itemscope itemtype="http://schema.org/CreativeWork">
+					<div class="project-showcase col m5{{ if eq (mod $id 2) 0 }} reverse{{end}}">
+						<img src="/images/projects/{{.image}}{{ if eq (mod $id 2) 0 }}-reverse{{end}}.png" alt="">
+					</div>
+					<div class="project-details col m7">
+						<h1 class="entry-title">{{ .title }}</h1>
+						{{- if .subtitle -}}
+							<h2 class="sub">{{ .subtitle }}</h2>
+						{{- end -}}
+
+						<ul class="entry-meta">
+							{{- range $tag := .tags -}}
+								<li>{{ $tag }}</li>
+							{{- end -}}
+						</ul>
+						<div class="entry-content"><p>{{ .desc | markdownify }}</p></div>
+						{{- if .url -}}
+							<a href="{{ .url }}" target="_blank" rel="external" class="button">Visit website</a>
+						{{- end -}}
+					</div>
+				</article>
+			{{- end -}}
+		</div>
+	</div>
+	{{- partial "sep-bottom.svg" . -}}
+</section>

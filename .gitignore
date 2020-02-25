@@ -1,0 +1,11 @@
+._*
+.DS_Store
+*.sublime-*
+
+node_modules/
+public/
+static/*
+!static/favicon.ico
+
+# Local Netlify folder
+.netlify

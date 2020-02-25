@@ -1,0 +1,73 @@
+.footer {
+	@extend %clearfix;
+
+	background-color: map-get($colors, 3);
+	position: relative;
+	text-align: center;
+	margin: 5rem 0 0;
+	padding: 5rem 0;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // sass-lint:disable-line no-vendor-prefixes
+
+	.logo {
+		position: absolute;
+		display: block;
+		margin: auto;
+		outline: 0;
+		top: -5rem;
+		border: 0;
+		right: 0;
+		left: 0;
+
+		.dot {
+			animation-duration: .55s;
+			animation-fill-mode: both;
+
+		}
+
+		.logo-svg {
+			&:hover,
+			&:active {
+				.dot {
+					animation-name: bounce;
+					transform-origin: center bottom;
+				}
+			}
+		}
+	}
+
+	.copy {
+		font-family: $font-secondary;
+		color: map-get($colors, 4);
+		padding: 1.2rem .8rem;
+		margin: 2.5rem 0 0;
+		font-size: 1.2rem;
+		line-height: 1.2;
+	}
+}
+
+@keyframes bounce {
+	from,
+	20%,
+	53%,
+	80%,
+	to {
+		animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+		transform: translate3d(0, 0, 0);
+	}
+
+	40%,
+	43% {
+		animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+		transform: translate3d(0, -30px, 0);
+	}
+
+	70% {
+		animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+		transform: translate3d(0, -15px, 0);
+	}
+
+	90% {
+		transform: translate3d(0, -4px, 0);
+	}
+}

@@ -1,0 +1,55 @@
+nav {
+	margin: 2rem 0 .5rem;
+	text-align: center;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: inline-block;
+			text-align: left;
+
+			a {
+				transition: color .15s, background .15s;
+				font-family: $font-secondary;
+				text-transform: uppercase;
+				padding: .6rem 1rem;
+				font-size: 1.4rem;
+				line-height: 1.2;
+				font-weight: 600;
+				display: block;
+			}
+
+			&.menu-current a,
+			a:hover {
+				color: map-get($colors, 1);
+			}
+		}
+	}
+}
+
+.contact nav ul .highlight a {
+	color: map-get($colors, 1);
+}
+
+@media (min-width: map-get($breakpoints, grid)) {
+	nav {
+		margin: .6rem 0 .5rem;
+		text-align: left;
+		float: right;
+
+		ul {
+			li {
+				a {
+					padding: .7rem 1.2rem;
+				}
+
+				&.highlight a {
+					border: 1px solid map-get($colors, 2);
+				}
+			}
+		}
+	}
+}
