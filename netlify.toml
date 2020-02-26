@@ -1,0 +1,7 @@
+[build]
+  publish = "dist"
+  command = "npm run generate"
+
+  [build.environment]
+    NODE_VERSION = "v10.18.1"
+    BASE_URL = "https://andrei.io"
