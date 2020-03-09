@@ -6,8 +6,8 @@
 	<a
 		:class="buttonClassObject"
 		:href="href"
-		rel="noopener"
 		:target="newTab ? '_blank' : false"
+		rel="noopener"
 		v-else
 	>
 		<slot />
