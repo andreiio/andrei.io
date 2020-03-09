@@ -7,8 +7,8 @@
 		/>
 
 		<textarea
-			:class="inputClasses"
 			v-if="type === 'textarea'"
+			:class="inputClasses"
 			:id="name"
 			:name="name"
 			:required="required"

@@ -35,17 +35,10 @@
 				return this.shouldAnimate || !this.fill;
 			},
 			classObject() {
-				let classes = [];
-
-				if (this.shouldAnimate && this.draw) {
-					classes.push('draw');
-				}
-
-				if (this.hover) {
-					classes.push('bounce');
-				}
-
-				return classes;
+				return {
+					draw: this.shouldAnimate && this.draw,
+					bounce: this.hover,
+				};
 			},
 			svg() {
 				return require('!svg-inline-loader!~/assets/svg/logo.svg').replace(
