@@ -1,42 +1,42 @@
 <template>
-	<section class="container grid row-gap-16 mx-auto">
-		<header class="max-w-lg">
-			<h1
-				class="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl"
-				v-text="title"
-			/>
-			<p class="mt-2 text-lg" v-if="subtitle" v-html="subtitle" />
-		</header>
+    <section class="container grid row-gap-16 mx-auto">
+        <header class="max-w-lg">
+            <h1
+                class="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl"
+                v-text="title"
+            />
+            <p class="mt-2 text-lg" v-if="subtitle" v-html="subtitle" />
+        </header>
 
-		<slot />
+        <slot />
 
-		<div v-if="hasFooterSlot">
-			<slot name="footer" />
-		</div>
-	</section>
+        <div v-if="hasFooterSlot">
+            <slot name="footer" />
+        </div>
+    </section>
 </template>
 
 <script>
-	export default {
-		props: {
-			title: {
-				type: String,
-				required: true,
-			},
-			subtitle: {
-				type: String,
-				required: false,
-				default: '',
-			},
-			flexClass: {
-				type: String,
-				required: false,
-			},
-		},
-		computed: {
-			hasFooterSlot() {
-				return !!this.$slots['footer'];
-			},
-		},
-	};
+    export default {
+        props: {
+            title: {
+                type: String,
+                required: true,
+            },
+            subtitle: {
+                type: String,
+                required: false,
+                default: '',
+            },
+            flexClass: {
+                type: String,
+                required: false,
+            },
+        },
+        computed: {
+            hasFooterSlot() {
+                return !!this.$slots['footer'];
+            },
+        },
+    };
 </script>
