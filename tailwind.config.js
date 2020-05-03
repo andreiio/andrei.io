@@ -78,7 +78,7 @@ module.exports = {
                     '0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.125)',
             },
         },
-        textStyles: theme => ({
+        textStyles: (theme) => ({
             heading: {
                 output: false,
                 fontWeight: theme('fontWeight.bold'),
@@ -175,4 +175,15 @@ module.exports = {
             componentPrefix: '',
         }),
     ],
+    purge: {
+        content: [
+            'content/**/*.md',
+            'components/**/*.vue',
+            'layouts/**/*.vue',
+            'pages/**/*.vue',
+        ],
+        options: {
+            whitelist: ['rich-text'],
+        },
+    },
 };
