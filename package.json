@@ -1,31 +1,31 @@
 {
-	"name": "andrei.io",
-	"version": "2.0.0",
-	"description": "Personal website",
-	"author": "Andrei Ioniță",
-	"private": true,
-	"scripts": {
-		"dev": "nuxt",
-		"build": "nuxt build",
-		"start": "nuxt start",
-		"generate": "nuxt generate"
-	},
-	"dependencies": {
-		"nuxt": "^2.12.2"
-	},
-	"devDependencies": {
-		"@nuxtjs/google-analytics": "^2.2.3",
-		"@nuxtjs/tailwindcss": "^2.0.0",
-		"frontmatter-markdown-loader": "^3.4.2",
-		"markdown-it-attrs": "^3.0.2",
-		"node-sass": "^4.14.0",
-		"nuxt-i18n": "^6.11.0",
-		"postcss-nested": "^4.2.1",
-		"prettier": "^2.0.5",
-		"sass-loader": "^8.0.2",
-		"svg-inline-loader": "^0.8.2",
-		"tailwindcss-typography": "^3.0.1",
-		"vue-feather-icons": "^5.0.0",
-		"vue2-filters": "^0.11.0"
-	}
+    "name": "andrei.io",
+    "version": "2.0.0",
+    "description": "Personal website",
+    "author": "Andrei Ioniță",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "nuxt": "^2.13.1"
+    },
+    "devDependencies": {
+        "@nuxtjs/google-analytics": "^2.3.0",
+        "@nuxtjs/tailwindcss": "^2.0.0",
+        "frontmatter-markdown-loader": "^3.6.0",
+        "markdown-it-attrs": "^3.0.3",
+        "node-sass": "^4.14.1",
+        "nuxt-i18n": "^6.12.2",
+        "postcss-nested": "^4.2.1",
+        "prettier": "1.19.1",
+        "sass-loader": "^8.0.2",
+        "svg-inline-loader": "^0.8.2",
+        "tailwindcss-typography": "^3.1.0",
+        "vue-feather-icons": "^5.0.0",
+        "vue2-filters": "^0.11.0"
+    }
 }
