@@ -72,7 +72,7 @@ export default {
      ** Plugins to load before mounting the App
      */
     plugins: [
-        { src: '~/plugins/filters.js' },
+        { src: '~plugins/filters.js' },
         { src: '~plugins/ssr-components.js' },
     ],
 
@@ -87,7 +87,11 @@ export default {
     /*
      ** Nuxt.js modules
      */
-    modules: ['nuxt-i18n', '@nuxtjs/google-analytics'],
+    modules: [
+        //
+        '@nuxtjs/google-analytics',
+        'nuxt-i18n',
+    ],
 
     googleAnalytics: {
         id: process.env.ANALYTICS_ID,
@@ -117,7 +121,6 @@ export default {
     tailwindcss: {
         configPath: '~/tailwind.config.js',
         cssPath: '~/assets/css/tailwind.pcss',
-        purgeCSSInDev: false,
     },
 
     purgeCSS: {
