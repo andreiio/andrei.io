@@ -9,6 +9,8 @@ import messages from './i18n';
 export default {
     mode: 'universal',
 
+    target: 'static',
+
     env: {
         BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
     },
