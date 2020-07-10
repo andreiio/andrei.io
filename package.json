@@ -8,10 +8,10 @@
         "dev": "nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
-        "generate": "nuxt generate"
+        "generate": "nuxt build && nuxt export"
     },
     "dependencies": {
-        "nuxt": "^2.13.1"
+        "nuxt": "^2.13.3"
     },
     "devDependencies": {
         "@nuxtjs/google-analytics": "^2.3.0",
@@ -19,10 +19,10 @@
         "frontmatter-markdown-loader": "^3.6.0",
         "markdown-it-attrs": "^3.0.3",
         "node-sass": "^4.14.1",
-        "nuxt-i18n": "^6.12.2",
-        "postcss-nested": "^4.2.1",
+        "nuxt-i18n": "^6.13.1",
+        "postcss-nested": "^4.2.3",
         "prettier": "1.19.1",
-        "sass-loader": "^8.0.2",
+        "sass-loader": "^9.0.2",
         "svg-inline-loader": "^0.8.2",
         "tailwindcss-typography": "^3.1.0",
         "vue-feather-icons": "^5.0.0",
