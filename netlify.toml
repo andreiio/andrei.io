@@ -2,6 +2,6 @@
 command = "npm run generate"
 publish = "dist"
 
-    [build.environment]
-    BASE_URL     = "https://andrei.io"
-    NODE_VERSION = "v12.18.2"
+[build.environment]
+BASE_URL = "https://andrei.io"
+NODE_VERSION = "v12.18.2"
