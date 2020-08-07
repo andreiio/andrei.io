@@ -5,9 +5,8 @@
         <div class="col-span-12 text-center text-blue-100">
             <div class="relative block my-5 leading-none">
                 <h1
-                    class="relative inline-block overflow-hidden font-semibold whitespace-no-wrap error-code"
-                    :data-code="error.statusCode"
-                    v-text="error.statusCode"
+                    class="relative inline-block font-semibold whitespace-no-wrap error-code"
+                    v-html="statusCode"
                 />
             </div>
             <div class="mt-16">
@@ -36,42 +35,48 @@
                 type: Object,
             },
         },
+        computed: {
+            statusCode() {
+                return this.error.statusCode
+                    .toString()
+                    .split('')
+                    .map(x => `<span>${x}</span>`)
+                    .join('');
+            },
+        },
     };
 </script>
 
-<style lang="scss" scoped>
+<style lang="postcss" scoped>
     .error-code {
         text-shadow: 1px 2px 3px #000;
         line-height: 0.79;
         font-size: 25vw;
 
-        &::before {
-            text-shadow: -0.5vw -0.5vw #17263f, 0.5vw 0.5vw #17263f;
-            animation: glitch 5s infinite alternate-reverse;
-            animation-delay: 0.5s;
-            clip: rect(0, 1px, 0, 0);
-            content: attr(data-code);
-            font-weight: inherit;
-            position: absolute;
-            color: currentColor;
-            left: -2px;
-            top: -2px;
+        >>> span:nth-child(2) {
+            animation: flicker 5s linear infinite;
         }
     }
 
-    @keyframes glitch {
-        $maxClipHeight: 25;
-        $steps: 20;
+    @keyframes flicker {
+        0%,
+        19.999%,
+        22%,
+        62.999%,
+        64%,
+        64.999%,
+        70%,
+        100% {
+            opacity: 1;
+        }
 
-        @for $step from 0 through $steps {
-            #{percentage($step * (1 / $steps))} {
-                clip: rect(
-                    random($maxClipHeight) + vmin,
-                    100vw,
-                    random($maxClipHeight) + vmin,
-                    0
-                );
-            }
+        20%,
+        21.999%,
+        63%,
+        63.999%,
+        65%,
+        69.999% {
+            opacity: 0.25;
         }
     }
 </style>
