@@ -1,7 +1,7 @@
 <template>
-	<div class="row-gap-20 py-16 pt-48">
-		<header class="grid col-start-2 col-end-12 row-gap-16 text-lg">
-			<div class="grid row-gap-16">
+	<div class="gap-y-20 py-16 pt-48">
+		<header class="grid col-start-2 col-end-12 gap-y-16 text-lg">
+			<div class="grid gap-y-16">
 				<div class="grid lg:grid-cols-4 lg:gap-16">
 					<time
 						class="text-2xl font-extrabold lg:text-3xl xl:text-5xl lg:col-span-1"
@@ -31,7 +31,7 @@
 				</div>
 
 				<aside
-					class="grid row-gap-4 lg:grid-cols-4 lg:gap-16"
+					class="grid gap-y-4 lg:grid-cols-4 lg:gap-16"
 					v-if="md.attributes.client"
 				>
 					<div class="lg:col-span-1">
@@ -51,7 +51,7 @@
 		</header>
 
 		<component
-			class="grid grid-cols-1 col-start-2 col-end-12 row-gap-20 col-gap-8 text-lg lg:grid-cols-2"
+			class="grid grid-cols-1 col-start-2 col-end-12 gap-y-20 gap-x-8 text-lg lg:grid-cols-2"
 			:is="md.vue.component"
 		/>
 	</div>

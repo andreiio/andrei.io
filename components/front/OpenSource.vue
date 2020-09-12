@@ -3,7 +3,7 @@
         :title="$t('openSource.title')"
         :subtitle="$t('openSource.subtitle')"
     >
-        <div class="grid row-gap-20 col-gap-16 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-y-20 gap-x-16 md:grid-cols-2 lg:grid-cols-3">
             <div v-for="repo in repos" :key="repo.repo">
                 <a
                     class="inline-block text-xl font-semibold hover:underline"

@@ -1,4 +1,8 @@
 module.exports = {
+    future: {
+        purgeLayersByDefault: true,
+        removeDeprecatedGapUtilities: true,
+    },
     theme: {
         container: {
             padding: '2rem',
@@ -78,7 +82,7 @@ module.exports = {
                     '0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.125)',
             },
         },
-        textStyles: (theme) => ({
+        textStyles: theme => ({
             heading: {
                 output: false,
                 fontWeight: theme('fontWeight.bold'),

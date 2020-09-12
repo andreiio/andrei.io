@@ -1,5 +1,5 @@
 <template>
-	<div class="row-gap-32">
+	<div class="gap-y-32">
 		<FrontHero />
 
 		<FrontWork />

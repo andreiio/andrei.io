@@ -1,6 +1,6 @@
 <template>
     <nav class="absolute inset-x-0 top-0 z-50" v-if="!isFrontOrErrorPage">
-        <div class="container grid grid-cols-4 col-gap-4 py-8 mx-auto">
+        <div class="container grid grid-cols-4 gap-x-4 py-8 mx-auto">
             <BaseLink class="col-span-1 focus:outline-none" to="/">
                 <Logo class="w-10 h-10 lg:w-12 lg:h-12" :draw="this.drawLogo" />
             </BaseLink>

@@ -1,6 +1,6 @@
 <template>
     <BaseSection :title="$t('work.title')" :subtitle="$t('work.subtitle')">
-        <div class="grid row-gap-16 col-gap-12 md:grid-cols-2 xl:grid-cols-3">
+        <div class="grid gap-y-16 gap-x-12 md:grid-cols-2 xl:grid-cols-3">
             <ProjectDetail
                 v-for="project in projects"
                 :project="project"

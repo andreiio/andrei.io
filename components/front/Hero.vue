@@ -1,6 +1,6 @@
 <template>
     <section
-        class="relative flex flex-col-reverse items-center justify-center px-8 bg-blue-800 lg:pr-0 bg-pattern lg:grid lg:grid-cols-12 lg:col-gap-4"
+        class="relative flex flex-col-reverse items-center justify-center px-8 bg-blue-800 lg:pr-0 bg-pattern lg:grid lg:grid-cols-12 lg:gap-x-4"
     >
         <div
             class="relative max-w-xl pb-12 lg:mx-auto lg:pr-12 lg:py-40 xl:py-56 xl:pr-0 lg:col-start-1 lg:col-end-8 lg:row-end-1"

@@ -2,7 +2,7 @@
 	<div class="py-16 pt-48">
 		<h1 class="h1" :title="$t('front.work.title')" />
 
-		<div class="grid row-gap-20 col-gap-16 lg:grid-cols-2">
+		<div class="grid gap-y-20 gap-x-16 lg:grid-cols-2">
 			<ProjectThumbnail
 				v-for="(project, index) in projects"
 				:project="project"

@@ -1,5 +1,5 @@
 <template>
-    <section class="container grid row-gap-16 mx-auto">
+    <section class="container grid gap-y-16 mx-auto">
         <header class="max-w-lg">
             <h1
                 class="text-2xl font-bold leading-tight md:text-3xl lg:text-4xl"
