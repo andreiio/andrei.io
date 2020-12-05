@@ -4,4 +4,4 @@ publish = "dist"
 
 [build.environment]
 BASE_URL = "https://andrei.io"
-NODE_VERSION = "v14.10.1"
+NODE_VERSION = "v14.15.1"
