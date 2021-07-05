@@ -7,7 +7,7 @@
             class="block"
             :title="$t('button.live')"
         >
-            <BaseImage
+            <base-image
                 class="w-full mb-5 overflow-hidden rounded shadow-md hover:shadow-lg"
                 :src="`work/${project.meta.slug}/thumbnail.jpg`"
             />

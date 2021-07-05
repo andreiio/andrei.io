@@ -1,5 +1,5 @@
 <template>
-    <BaseSection
+    <base-section
         :title="$t('clients.title')"
         :subtitle="$t('clients.subtitle')"
     >
@@ -9,7 +9,7 @@
                 v-for="(client, index) in clients"
                 :key="index"
             >
-                <BaseImage
+                <base-image
                     :src="`clients/${client.id}.png`"
                     :alt="client.name"
                     :title="client.name"
@@ -17,7 +17,7 @@
                 />
             </div>
         </div>
-    </BaseSection>
+    </base-section>
 </template>
 
 <script>

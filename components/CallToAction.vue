@@ -9,7 +9,7 @@
             />
 
             <div>
-                <BaseButton
+                <base-button
                     size="lg"
                     type="nuxt"
                     href="/contact/"

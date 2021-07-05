@@ -1,7 +1,7 @@
 <template>
     <ul class="flex">
         <li v-for="item in menu" :key="item.id">
-            <BaseLink
+            <base-link
                 :to="item.to"
                 v-text="item.label"
                 exact-active-class="text-blue-600 bg-gray-100"

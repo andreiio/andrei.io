@@ -1,6 +1,6 @@
 <template>
     <footer class="relative mt-40" v-if="!this.$nuxt.context._errored">
-        <Separator accentColor="#cbd5e0" backgroundColor="#e2e8f0" />
+        <separator accentColor="#cbd5e0" backgroundColor="#e2e8f0" />
 
         <div class="px-5 pt-16 pb-10 bg-gray-100">
             <div class="container max-w-lg mx-auto text-center">
@@ -44,8 +44,9 @@
                         >Github</a
                     >.
                 </p>
+
                 <div class="inline-flex mt-6">
-                    <Social dark />
+                    <social dark />
                 </div>
             </div>
         </div>

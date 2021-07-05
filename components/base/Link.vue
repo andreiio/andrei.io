@@ -1,11 +1,11 @@
 <template>
-    <NuxtLink
+    <nuxt-link
         :to="localePath(to)"
         :active-class="activeClass"
         :exact-active-class="exactActiveClass"
     >
         <slot />
-    </NuxtLink>
+    </nuxt-link>
 </template>
 
 <script>

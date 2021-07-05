@@ -1,5 +1,5 @@
 <template>
-    <BaseSection
+    <base-section
         :title="$t('openSource.title')"
         :subtitle="$t('openSource.subtitle')"
     >
@@ -11,7 +11,9 @@
                     target="_blank"
                     v-text="repo.repo"
                 />
+
                 <p class="my-2 text-sm" v-text="repo.description" />
+
                 <span class="flex items-center mt-1">
                     <i
                         class="w-3 h-3 mr-1 rounded-full"
@@ -19,6 +21,7 @@
                             backgroundColor: repo.primaryLanguage.color,
                         }"
                     />
+
                     <span
                         class="text-xs text-gray-600"
                         v-text="repo.primaryLanguage.name"
@@ -26,7 +29,7 @@
                 </span>
             </div>
         </div>
-    </BaseSection>
+    </base-section>
 </template>
 
 <script>
@@ -41,7 +44,7 @@
 
 <style lang="postcss" scoped>
     >>> .code4-logo {
-        @apply pl-6 font-semibold whitespace-no-wrap;
+        @apply pl-6 font-semibold whitespace-nowrap;
         @apply bg-left bg-no-repeat inline-block;
         @apply border-b border-transparent border-solid;
 

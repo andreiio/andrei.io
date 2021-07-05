@@ -1,7 +1,7 @@
 <template>
-    <BaseLink :class="buttonClassObject" :to="href" v-if="type === 'nuxt'">
+    <base-link :class="buttonClassObject" :to="href" v-if="type === 'nuxt'">
         <slot />
-    </BaseLink>
+    </base-link>
 
     <a
         :class="buttonClassObject"

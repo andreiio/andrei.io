@@ -1,23 +1,23 @@
 <template>
-	<div class="gap-y-32">
-		<FrontHero />
+    <div class="gap-y-32">
+        <front-hero />
 
-		<FrontWork />
+        <front-work />
 
-		<CallToAction />
+        <call-to-action />
 
-		<FrontClients />
+        <front-clients />
 
-		<Separator accentColor="#cbd5e0" backgroundColor="#e2e8f0" reverse />
+        <separator accentColor="#cbd5e0" backgroundColor="#e2e8f0" reverse />
 
-		<FrontOpenSource />
-	</div>
+        <front-open-source />
+    </div>
 </template>
 
 <script>
-	export default {
-		head: {
-			titleTemplate: null,
-		},
-	};
+    export default {
+        head: {
+            titleTemplate: null,
+        },
+    };
 </script>

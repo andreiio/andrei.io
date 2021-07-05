@@ -1,11 +1,11 @@
 <template>
     <nav class="absolute inset-x-0 top-0 z-50" v-if="!isFrontOrErrorPage">
-        <div class="container grid grid-cols-4 gap-x-4 py-8 mx-auto">
-            <BaseLink class="col-span-1 focus:outline-none" to="/">
-                <Logo class="w-10 h-10 lg:w-12 lg:h-12" :draw="this.drawLogo" />
-            </BaseLink>
+        <div class="container grid grid-cols-4 py-8 mx-auto gap-x-4">
+            <base-link class="col-span-1 focus:outline-none" to="/">
+                <logo class="w-10 h-10 lg:w-12 lg:h-12" :draw="this.drawLogo" />
+            </base-link>
 
-            <NavigationMenu class="flex items-center justify-end col-span-3" />
+            <navigation-menu class="flex items-center justify-end col-span-3" />
         </div>
     </nav>
 </template>

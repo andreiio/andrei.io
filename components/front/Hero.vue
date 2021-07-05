@@ -5,7 +5,7 @@
         <div
             class="relative max-w-xl pb-12 lg:mx-auto lg:pr-12 lg:py-40 xl:py-56 xl:pr-0 lg:col-start-1 lg:col-end-8 lg:row-end-1"
         >
-            <Logo
+            <logo
                 class="w-10 h-10 my-12 text-blue-200 lg:w-12 lg:h-12 lg:mt-0"
                 :draw="true"
             />
@@ -43,15 +43,16 @@
                 :class="animatedClassObject"
                 style="--delay: 5"
             >
-                {{ $t('hero.callToAction.more') }}
-                <BaseLink
+                <span v-text="$t('hero.callToAction.more')" />
+
+                <base-link
                     to="/contact/"
                     class="underline hover:no-underline"
                     v-text="$t('hero.callToAction.hire')"
                 />.
             </p>
 
-            <Social
+            <social
                 class="mt-8 animate-fadeInUp"
                 :class="animatedClassObject"
                 style="--delay: 6"
@@ -61,7 +62,7 @@
             class="hidden overflow-hidden lg:relative lg:rounded-none animate-heroImage lg:block lg:h-full lg:m-0 lg:z-10 lg:w-auto lg:col-start-7 lg:col-end-13 lg:row-end-1"
             :class="animatedClassObject"
         >
-            <BaseImage
+            <base-image
                 class="lg:absolute lg:inset-0 lg:w-full lg:h-full lg:object-cover"
                 :placeholder="false"
                 src="profile.jpg"
@@ -79,7 +80,7 @@
                 return !this.shouldAnimate ? 'no-animate' : '';
             },
             ...mapState({
-                shouldAnimate: state => state.animations.hero,
+                shouldAnimate: (state) => state.animations.hero,
             }),
         },
         methods: {

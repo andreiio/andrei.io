@@ -29,7 +29,7 @@
         },
         computed: {
             ...mapState({
-                shouldAnimate: state => state.animations.logo,
+                shouldAnimate: (state) => state.animations.logo,
             }),
             showClipPath() {
                 return this.shouldAnimate || !this.fill;

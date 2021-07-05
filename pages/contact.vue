@@ -1,6 +1,9 @@
 <template>
     <div class="container gap-20 py-16 pt-48 lg:grid-cols-2">
-        <h1 class="h1 lg:col-span-2 " v-text="md.attributes.title" />
+        <h1
+            class="text-3xl font-extrabold lg:text-4xl xl:text-5xl lg:col-span-2"
+            v-text="md.attributes.title"
+        />
 
         <component :is="md.vue.component" />
 
@@ -19,28 +22,28 @@
 
             <input type="hidden" name="form-name" value="contact" />
 
-            <FormInput
+            <form-input
                 :label="$t('form.name')"
                 type="text"
                 name="name"
                 required
             />
 
-            <FormInput
+            <form-input
                 :label="$t('form.email')"
                 type="email"
                 name="email"
                 required
             />
 
-            <FormInput
+            <form-input
                 :label="$t('form.message')"
                 type="textarea"
                 name="message"
                 required
             />
 
-            <FormButton v-text="$t('form.submit')" />
+            <form-button v-text="$t('form.submit')" />
         </form>
     </div>
 </template>

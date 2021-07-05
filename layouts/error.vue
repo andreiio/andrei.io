@@ -3,9 +3,9 @@
         class="items-center w-full min-h-screen bg-blue-800 lg:justify-center bg-pattern"
     >
         <div class="col-span-12 text-center text-blue-100">
-            <div class="relative block my-5 leading-none">
+            <div class="relative block my-5">
                 <h1
-                    class="relative inline-block font-semibold whitespace-no-wrap error-code"
+                    class="relative inline-block font-semibold whitespace-nowrap error-code"
                     v-html="statusCode"
                 />
             </div>
@@ -40,7 +40,7 @@
                 return this.error.statusCode
                     .toString()
                     .split('')
-                    .map(x => `<span>${x}</span>`)
+                    .map((x) => `<span>${x}</span>`)
                     .join('');
             },
         },
