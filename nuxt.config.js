@@ -110,19 +110,7 @@ export default {
         },
     },
 
-    // purgeCSS: {
-    //     paths: ['content/**/*.md', 'components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue'],
-    //     whitelist: ['rich-text'],
-    //     extractors: [
-    //         {
-    //             extractor: content => content.match(/[A-z0-9-:\\/]+/g),
-    //             extensions: ['html', 'md', 'js', 'vue'],
-    //         },
-    //     ],
-    // },
-
     router: {
-        prefetchLinks: false,
         trailingSlash: true,
     },
 
