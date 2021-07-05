@@ -43,7 +43,6 @@
                 let style = [
                     'relative',
                     'inline-flex',
-                    'leading-snug',
                     'tracking-wide',
                     'items-center',
                     'border-gray-300',

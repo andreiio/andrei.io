@@ -4,7 +4,7 @@
             class="container grid items-center justify-center gap-10 mx-auto md:grid-cols-2"
         >
             <h1
-                class="text-2xl font-bold leading-tight text-center text-white md:text-3xl md:text-right lg:text-4xl xl:text-5xl"
+                class="text-2xl font-bold text-center text-white md:text-3xl md:text-right lg:text-4xl xl:text-5xl"
                 v-text="$t('callToAction.title')"
             />
 

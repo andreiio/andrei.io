@@ -3,7 +3,7 @@
         <Separator accentColor="#cbd5e0" backgroundColor="#e2e8f0" />
 
         <div class="px-5 pt-16 pb-10 bg-gray-100">
-            <div class="container max-w-lg mx-auto leading-relaxed text-center">
+            <div class="container max-w-lg mx-auto text-center">
                 <p class="mb-3 font-semibold">
                     © 2012–{{ new Date().getFullYear() }}
                     {{ $t('footer.copy') }}

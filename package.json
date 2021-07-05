@@ -11,21 +11,28 @@
         "generate": "nuxt generate"
     },
     "dependencies": {
-        "nuxt": "^2.14.9"
+        "@nuxtjs/google-analytics": "^2.4.0",
+        "@nuxtjs/tailwindcss": "^4.2.0",
+        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/typography": "^0.4.1",
+        "autoprefixer": "^10.2.6",
+        "frontmatter-markdown-loader": "^3.6.2",
+        "nuxt": "^2.15.7",
+        "postcss": "^8.3.5",
+        "postcss-nested": "^5.0.5",
+        "svg-inline-loader": "^0.8.2",
+        "markdown-it-attrs": "^4.0.0",
+        "nuxt-i18n": "^6.27.2",
+        "vue-feather-icons": "^5.1.0",
+        "vue2-filters": "^0.13.0"
     },
     "devDependencies": {
-        "@nuxtjs/google-analytics": "^2.4.0",
-        "@nuxtjs/tailwindcss": "^3.3.3",
+        "commitizen": "^4.2.4",
         "cz-conventional-changelog": "^3.3.0",
-        "frontmatter-markdown-loader": "^3.6.2",
-        "markdown-it-attrs": "^3.0.3",
-        "nuxt-i18n": "^6.15.4",
-        "postcss-nested": "^4.2.3",
-        "prettier": "1.19.1",
-        "svg-inline-loader": "^0.8.2",
-        "tailwindcss-typography": "^3.1.0",
-        "vue-feather-icons": "^5.1.0",
-        "vue2-filters": "^0.11.0"
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^7.0.0",
+        "prettier": "^2.3.2"
     },
     "config": {
         "commitizen": {

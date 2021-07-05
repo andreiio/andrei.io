@@ -52,7 +52,6 @@
                 'w-full',
                 'px-4',
                 'py-3',
-                'leading-tight',
                 'text-gray-800',
                 'border',
                 'border-gray-200',

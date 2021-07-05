@@ -13,7 +13,7 @@
                     :src="`clients/${client.id}.png`"
                     :alt="client.name"
                     :title="client.name"
-                    class="block w-full client"
+                    class="block w-full duration-300 filter saturate-0 hover:saturate-100 duration transition-filter"
                 />
             </div>
         </div>
@@ -29,14 +29,3 @@
         },
     };
 </script>
-
-<style lang="postcss" scoped>
-    .client {
-        transition: filter 0.275s;
-        filter: saturate(0);
-
-        &:hover {
-            filter: saturate(1);
-        }
-    }
-</style>

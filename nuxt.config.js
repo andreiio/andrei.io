@@ -7,15 +7,14 @@ import getDynamicPaths from './mixins/getDynamicPaths.js';
 import messages from './i18n';
 
 export default {
-    target: 'static',
-
     env: {
         BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
     },
 
-    /*
-     ** Headers of the page
-     */
+    // Target: https://go.nuxtjs.dev/config-target
+    target: 'static',
+
+    // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
         meta: [
             { charset: 'utf-8' },
@@ -23,14 +22,8 @@ export default {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1',
             },
-            {
-                name: 'msapplication-TileColor',
-                content: '#17263F',
-            },
-            {
-                name: 'theme-color',
-                content: '#17263F',
-            },
+            { name: 'msapplication-TileColor', content: '#17263F' },
+            { name: 'theme-color', content: '#17263F' },
         ],
         link: [
             {
@@ -57,36 +50,35 @@ export default {
             },
         ],
     },
+
+    // Global CSS: https://go.nuxtjs.dev/config-css
+    css: [
+        //
+    ],
+
+    // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+    plugins: [
+        //
+        { src: '~plugins/filters.js' },
+    ],
+
+    // Auto import components: https://go.nuxtjs.dev/config-components
+    components: true,
+
     /*
      ** Customize the progress-bar color
      */
     loading: {
         color: '#2E4D7D',
     },
-    /*
-     ** Global CSS
-     */
-    css: [],
 
-    /*
-     ** Plugins to load before mounting the App
-     */
-    plugins: [
-        { src: '~plugins/filters.js' },
-        { src: '~plugins/ssr-components.js' },
-    ],
-
-    /*
-     ** Nuxt.js dev-modules
-     */
+    // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [
-        // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+        // https://go.nuxtjs.dev/tailwindcss
         '@nuxtjs/tailwindcss',
     ],
 
-    /*
-     ** Nuxt.js modules
-     */
+    // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
         //
         '@nuxtjs/google-analytics',
@@ -118,28 +110,19 @@ export default {
         },
     },
 
-    tailwindcss: {
-        configPath: '~/tailwind.config.js',
-        cssPath: '~/assets/css/tailwind.pcss',
-    },
-
-    purgeCSS: {
-        paths: [
-            'content/**/*.md',
-            'components/**/*.vue',
-            'layouts/**/*.vue',
-            'pages/**/*.vue',
-        ],
-        whitelist: ['rich-text'],
-        extractors: [
-            {
-                extractor: content => content.match(/[A-z0-9-:\\/]+/g),
-                extensions: ['html', 'md', 'js', 'vue'],
-            },
-        ],
-    },
+    // purgeCSS: {
+    //     paths: ['content/**/*.md', 'components/**/*.vue', 'layouts/**/*.vue', 'pages/**/*.vue'],
+    //     whitelist: ['rich-text'],
+    //     extractors: [
+    //         {
+    //             extractor: content => content.match(/[A-z0-9-:\\/]+/g),
+    //             extensions: ['html', 'md', 'js', 'vue'],
+    //         },
+    //     ],
+    // },
 
     router: {
+        prefetchLinks: false,
         trailingSlash: true,
     },
 
@@ -151,9 +134,7 @@ export default {
         },
     },
 
-    /*
-     ** Build configuration
-     */
+    // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
         extractCSS: true,
 
@@ -203,7 +184,7 @@ export default {
                     }).use(markdownItAttrs),
 
                     vue: {
-                        root: 'rich-text',
+                        root: 'prose prose-blue',
                     },
                 },
             });
@@ -211,10 +192,6 @@ export default {
     },
 
     generate: {
-        dir: 'dist',
         fallback: true,
-        routes: getDynamicPaths({
-            // '/work': 'work/*.md',
-        }),
     },
 };

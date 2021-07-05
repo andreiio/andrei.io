@@ -18,14 +18,14 @@
             />
 
             <h1
-                class="text-4xl font-extrabold leading-tight text-blue-200 lg:text-5xl xl:text-6xl animate-fadeInUp"
+                class="text-4xl font-extrabold text-blue-200 lg:text-5xl xl:text-6xl animate-fadeInUp"
                 :class="animatedClassObject"
                 style="--delay: 2"
                 v-text="$t('hero.name')"
             />
 
             <h2
-                class="mb-8 text-2xl font-extrabold leading-tight text-blue-400 lg:text-4xl xl:text-5xl animate-fadeInUp"
+                class="mb-8 text-2xl font-extrabold text-blue-400 lg:text-4xl xl:text-5xl animate-fadeInUp"
                 :class="animatedClassObject"
                 style="--delay: 3"
                 v-text="$t('hero.tagline')"
