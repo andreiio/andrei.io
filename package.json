@@ -27,16 +27,8 @@
         "vue2-filters": "^0.13.0"
     },
     "devDependencies": {
-        "commitizen": "^4.2.4",
-        "cz-conventional-changelog": "^3.3.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
-        "husky": "^7.0.0",
-        "prettier": "^2.3.2"
-    },
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog"
-        }
+        "prettier": "2.3.2"
     }
 }
