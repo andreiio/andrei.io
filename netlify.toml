@@ -5,3 +5,9 @@
     [build.environment]
         BASE_URL = "https://andrei.io"
         NODE_ENV = "production"
+
+[[redirects]]
+    from = "/*"
+    to = "https://github.com/andreiio"
+    status = 302
+    force = true
