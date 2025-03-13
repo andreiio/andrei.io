@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Picture } from 'astro:assets';
+
+import Links from '../components/Links.astro';
+import coverImage from '../assets/cover.jpg';
+---
+
+<Layout>
+    <div class="grid lg:grid-cols-2 min-h-screen bg-white dark:bg-black">
+        <section class="max-w-2xl px-6 mx-auto flex lg:items-center">
+            <div>
+                <header class="pt-12">
+                    <h1
+                        class="text-2xl font-bold text-zinc-800 sm:text-3xl px-1.5 dark:text-zinc-100"
+                        set:text="Andrei Ioniță"
+                    />
+
+                    <h2
+                        class="px-1.5 items-center text-zinc-500 mb-4 text-xl font-light"
+                        set:text="Photographer, programmer, pianist"
+                    />
+                </header>
+
+                <nav class="grid sm:grid-cols-2 gap-y-4 gap-x-8">
+                    <Links
+                        heading="Photography"
+                        links={[
+                            {
+                                name: 'Instagram',
+                                url: 'https://www.instagram.com/andrei.on.film/',
+                                icon: 'instagram',
+                                iconClass: `group-hover:text-[#fd1d1d] group-focus:text-[#fd1d1d]`,
+                                rel: 'me',
+                            },
+                            {
+                                name: 'Bluesky',
+                                url: 'https://bsky.app/profile/andrei.io',
+                                icon: 'bluesky',
+                                iconClass: `group-hover:text-[#0085ff] group-focus:text-[#0085ff]`,
+                                rel: 'me',
+                            },
+                            {
+                                name: 'Mastodon',
+                                url: 'https://mastodon.social/@andreiio',
+                                icon: 'mastodon',
+                                iconClass: `group-hover:text-[#6364ff] group-focus:text-[#6364ff]`,
+                                rel: 'me',
+                            },
+                            {
+                                name: 'Flickr',
+                                url: 'https://flickr.com/photos/andreiio/',
+                                icon: 'flickr',
+                                iconClass: `grayscale-100 group-hover:grayscale-0 group-focus:grayscale-0`,
+                                rel: 'me',
+                            },
+                        ]}
+                    />
+
+                    <Links
+                        heading="Tech"
+                        links={[
+                            {
+                                name: 'GitHub',
+                                url: 'https://github.com/andreiio',
+                                icon: 'github',
+                                iconClass: `group-hover:text-black group-focus:text-black dark:group-hover:text-white dark:group-focus:text-white`,
+                                rel: 'me',
+                            },
+                            {
+                                name: 'LinkedIn',
+                                url: 'https://www.linkedin.com/in/andreiio/',
+                                icon: 'linkedin',
+                                iconClass: `group-hover:text-[#0A66C2] group-focus:text-[#0A66C2]`,
+                                rel: 'me',
+                            },
+                            {
+                                name: 'Commit Global',
+                                url: 'https://www.commitglobal.org/',
+                                icon: 'commitglobal',
+                                iconClass: `grayscale-100 group-hover:grayscale-0 group-focus:grayscale-0`,
+                            },
+                            {
+                                name: 'Code for Romania',
+                                url: 'https://www.code4.ro/',
+                                icon: 'code4romania',
+                                iconClass: `grayscale-100 group-hover:grayscale-0 group-focus:grayscale-0`,
+                            },
+                        ]}
+                    />
+                </nav>
+
+                <div class="my-8">
+                    <h3
+                        class="font-semibold border-b text-sm border-zinc-200 text-zinc-600 dark:border-zinc-800 dark:text-zinc-400 p-1.5"
+                        set:text="About me"
+                    />
+
+                    <div
+                        class="mt-2 space-y-3 text-lg leading-relaxed text-zinc-800 px-1.5 dark:text-zinc-300"
+                    >
+                        <p>
+                            Ipsam et cum molestiae expedita quia. Facilis
+                            molestiae voluptatem maxime velit rerum placeat
+                            suscipit. Inventore similique enim quasi aliquid
+                            molestiae ullam nulla. Voluptas ullam expedita vitae
+                            excepturi voluptatibus. Libero sequi dicta.
+                        </p>
+                        <p>
+                            Eius totam quo occaecati ut. Veritatis quo expedita
+                            molestias tenetur facilis. Voluptas tempora a
+                            voluptatem nihil itaque hic ducimus voluptatem. Sunt
+                            sint quia deleniti accusamus doloremque explicabo.
+                            Aspernatur reprehenderit sint corrupti nemo
+                            reiciendis ullam qui. Quasi eaque omnis itaque
+                            possimus praesentium eligendi.
+                        </p>
+                        <p>
+                            Et in ut repudiandae nesciunt incidunt molestias
+                            optio distinctio autem. Molestiae nemo quod
+                            doloremque vel esse sint dolorem porro quia. Quas
+                            nihil velit facilis veritatis quis voluptate quos.
+                        </p>
+
+                        <p>&mdash; Andrei</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="hidden lg:block sticky top-0 h-screen" role="presentation">
+            <Picture
+                src={coverImage}
+                formats={['avif', 'webp']}
+                alt=""
+                class="object-cover object-left-top h-screen"
+            />
+        </div>
+    </div>
+</Layout>
