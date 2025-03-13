@@ -1,0 +1,57 @@
+---
+import { Icon } from 'astro-icon/components';
+const { heading, links } = Astro.props;
+
+type link = {
+    name: string;
+    url: string;
+    icon: string;
+    iconClass?: string;
+    rel?: string;
+};
+
+interface Props {
+    heading: string;
+    links: link[];
+}
+---
+
+<div>
+    <h3
+        class="font-semibold border-b text-sm border-zinc-200 text-zinc-600 p-1.5 dark:border-zinc-800 dark:text-zinc-400"
+        set:text={heading}
+    />
+
+    <ul class="divide-y divide-zinc-200 dark:divide-zinc-800">
+        {
+            links.map((link) => (
+                <li>
+                    <a
+                        class="group p-1.5 gap-3 flex items-center transition-color duration-200 hover:bg-zinc-100 focus:bg-zinc-100 dark:hover:bg-zinc-900 dark:focus:bg-zinc-900 focus:outline-0 focus:ring-2 focus:ring-zinc-100 dark:focus:ring-zinc-800"
+                        href={link.url}
+                        rel={link.rel}
+                        target="_blank"
+                    >
+                        <Icon
+                            name={link.icon}
+                            class:list={[
+                                'size-4 text-zinc-500 transition-all duration-200',
+                                link?.iconClass,
+                            ]}
+                        />
+
+                        <span
+                            class="text-sm flex-1 text-zinc-700 dark:text-zinc-300"
+                            set:text={link.name}
+                        />
+
+                        <Icon
+                            name="external-link"
+                            class="size-4 text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                        />
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</div>
