@@ -1,14 +1,56 @@
 ---
 import '../styles/global.css';
+import { SEO } from 'astro-seo';
+
+const title = 'Andrei Ioniță';
+const description = `This website is dedicated to showcasing the photographic work of Andrei Ioniță, a Lisbon-based photographer working with film.`;
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <title>Andrei Ioniță</title>
+        <SEO
+            charset="UTF-8"
+            title={title}
+            description={description}
+            openGraph={{
+                basic: {
+                    title,
+                    type: 'website',
+                    image: '',
+                },
+                optional: {
+                    description,
+                },
+            }}
+            twitter={{
+                site: '@andreiio',
+                creator: '@andreiio',
+            }}
+            extend={{
+                link: [
+                    {
+                        rel: 'icon',
+                        href: '/favicon.svg',
+                        type: 'image/svg+xml',
+                    },
+                ],
+                meta: [
+                    {
+                        name: 'viewport',
+                        content: 'width=device-width, initial-scale=1.0',
+                    },
+                    {
+                        name: 'keywords',
+                        content: `Andrei Ioniță, personal website, portfolio, street photography, analogue photography, film photography`,
+                    },
+                    {
+                        name: 'fediverse:creator',
+                        content: '@andreiio@mastodon.social',
+                    },
+                ],
+            }}
+        />
     </head>
     <body>
         <slot />

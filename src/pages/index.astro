@@ -7,17 +7,17 @@ import coverImage from '../assets/cover.jpg';
 ---
 
 <Layout>
-    <div class="grid lg:grid-cols-2 min-h-screen bg-white dark:bg-black">
-        <section class="max-w-2xl px-6 mx-auto flex lg:items-center">
+    <div class="grid min-h-screen bg-white lg:grid-cols-2 dark:bg-black">
+        <section class="flex max-w-2xl px-6 mx-auto lg:items-center">
             <div>
                 <header class="pt-12">
                     <h1
-                        class="text-2xl font-bold text-zinc-800 sm:text-3xl px-1.5 dark:text-zinc-100"
+                        class="px-1.5 text-2xl font-bold text-zinc-800 dark:text-zinc-100 sm:text-3xl"
                         set:text="Andrei Ioniță"
                     />
 
                     <h2
-                        class="px-1.5 items-center text-zinc-500 mb-4 text-xl font-light"
+                        class="px-1.5 items-center mb-4 text-xl font-light text-zinc-600 dark:text-zinc-400"
                         set:text="Photographer, technologist"
                     />
                 </header>
@@ -127,7 +127,7 @@ import coverImage from '../assets/cover.jpg';
             </div>
         </section>
 
-        <div class="hidden lg:block sticky top-0 h-screen" role="presentation">
+        <div class="sticky top-0 hidden h-screen lg:block" role="presentation">
             <Picture
                 src={coverImage}
                 formats={['avif', 'webp']}
