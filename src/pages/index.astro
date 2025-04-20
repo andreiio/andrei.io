@@ -1,9 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Picture } from 'astro:assets';
-
 import Links from '../components/Links.astro';
-import coverImage from '../assets/cover.jpg';
+import Cover from '../components/Cover.jsx';
+
+import cover1 from '../assets/covers/1.jpg';
+import cover2 from '../assets/covers/2.jpg';
+import cover3 from '../assets/covers/3.jpg';
+import cover4 from '../assets/covers/4.jpg';
+import cover5 from '../assets/covers/5.jpg';
+
+const images = [cover1, cover2, cover3, cover4, cover5].map((i) => i.src);
 ---
 
 <Layout>
@@ -127,13 +133,6 @@ import coverImage from '../assets/cover.jpg';
             </div>
         </section>
 
-        <div class="sticky top-0 hidden h-screen lg:block" role="presentation">
-            <Picture
-                src={coverImage}
-                formats={['avif', 'webp']}
-                alt=""
-                class="object-cover object-left-top h-screen"
-            />
-        </div>
+        <Cover images={images} client:load />
     </div>
 </Layout>
