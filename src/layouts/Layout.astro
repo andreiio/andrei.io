@@ -53,10 +53,19 @@ const description = `This website is dedicated to showcasing the photographic wo
         />
 
         <script
-            src="https://plausible.env.pt/js/script.js"
+            src="https://plausible.env.pt/js/script.file-downloads.outbound-links.js"
             data-domain="andrei.io"
             is:inline
             defer></script>
+        <script is:inline>
+            window.plausible =
+                window.plausible ||
+                function () {
+                    (window.plausible.q = window.plausible.q || []).push(
+                        arguments
+                    );
+                };
+        </script>
     </head>
     <body>
         <slot />
